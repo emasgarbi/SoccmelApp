@@ -2,7 +2,7 @@ package com.example.soccmel.data
 
 import com.example.soccmel.model.*
 import com.example.soccmel.*
-import com.russhwolf.multiplatformsettings.Settings
+import com.russhwolf.settings.Settings
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update

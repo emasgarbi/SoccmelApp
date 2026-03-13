@@ -15,8 +15,8 @@ import androidx.compose.ui.unit.dp
 import com.example.soccmel.ui.theme.DeepOceanBlue
 import com.example.soccmel.ui.theme.MidnightBlue
 import org.jetbrains.compose.resources.painterResource
-import com.example.soccmel.shared.generated.resources.Res
-import com.example.soccmel.shared.generated.resources.ic_tortellino
+import soccmel.shared.generated.resources.Res
+import soccmel.shared.generated.resources.ic_tortellino
 import kotlin.random.Random
 
 @Composable

@@ -1,6 +1,6 @@
 package com.example.soccmel
 
-import com.russhwolf.multiplatformsettings.Settings
+import com.russhwolf.settings.Settings
 
 expect fun randomUUID(): String
 

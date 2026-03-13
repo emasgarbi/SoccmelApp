@@ -1,7 +1,7 @@
 package com.example.soccmel
 
-import com.russhwolf.multiplatformsettings.Settings
-import com.russhwolf.multiplatformsettings.SharedPreferencesSettings
+import com.russhwolf.settings.Settings
+import com.russhwolf.settings.SharedPreferencesSettings
 import android.content.Context
 import java.util.UUID
 

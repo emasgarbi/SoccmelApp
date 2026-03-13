@@ -19,7 +19,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Socc'mel"
+rootProject.name = "Soccmel"
 include(":app")
 include(":shared")
  

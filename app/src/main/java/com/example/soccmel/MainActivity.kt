@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import com.example.soccmel.App
+import com.example.soccmel.initAndroidContext
 import com.example.soccmel.data.RealRepository
 
 class MainActivity : ComponentActivity() {

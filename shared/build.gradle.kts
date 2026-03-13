@@ -31,11 +31,12 @@ kotlin {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
+            implementation(compose.materialIconsExtended)
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.kotlinx.serialization.json)
-            implementation(libs.multiplatform.settings)
+            implementation("com.russhwolf:multiplatform-settings:1.1.1")
             implementation("org.jetbrains.androidx.navigation:navigation-compose:2.7.0-alpha07")
         }
         androidMain.dependencies {
