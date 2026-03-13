@@ -90,8 +90,12 @@ fun AppMain() {
                     onAddPollClick = { navController.navigate("activities_menu") },
                     onSearchClick = { navController.navigate("search_users") },
                     onSettingsClick = { navController.navigate("settings") },
-                    onScoreClick = { navController.navigate("citizenship_score") }
+                    onScoreClick = { navController.navigate("citizenship_score") },
+                    onNotificationsClick = { navController.navigate("notifications") }
                 )
+            }
+            composable("notifications") {
+                NotificationsScreen(onBack = { navController.popBackStack() })
             }
             composable("activities_menu") {
                 ActivitiesMenuScreen(

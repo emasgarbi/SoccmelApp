@@ -11,7 +11,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -29,8 +28,6 @@ fun LoginScreen(onLoginSuccess: () -> Unit) {
     var passwordVisible by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
     
-    val context = LocalContext.current
-
     BolognaBackground {
         Column(
             modifier = Modifier
@@ -142,9 +139,9 @@ fun LoginScreen(onLoginSuccess: () -> Unit) {
                                     errorMessage = "Inserisci un'email valida"
                                 } else {
                                     val error = if (isLoginMode) {
-                                        RealRepository.login(context, email, password)
+                                        RealRepository.login(email, password)
                                     } else {
-                                        RealRepository.register(context, email, password)
+                                        RealRepository.register(email, password)
                                     }
                                     
                                     if (error == null) {

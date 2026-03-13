@@ -24,7 +24,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -42,7 +41,6 @@ fun ProfileScreen(userId: String? = null, onPollClick: (String) -> Unit, onLogou
         if (isOwnProfile) RealRepository.getMyPolls() 
         else emptyList() // For simplicity, only show polls on own profile for now
     }
-    val context = LocalContext.current
 
     var showEditDialog by remember { mutableStateOf(false) }
 
@@ -77,7 +75,7 @@ fun ProfileScreen(userId: String? = null, onPollClick: (String) -> Unit, onLogou
                                 Icon(Icons.Filled.Settings, contentDescription = "Impostazioni")
                             }
                             IconButton(onClick = {
-                                RealRepository.logout(context)
+                                RealRepository.logout()
                                 onLogout()
                             }) {
                                 Icon(

@@ -25,7 +25,6 @@ import com.example.soccmel.model.PollOption
 
 import androidx.compose.material.icons.filled.Send
 import androidx.compose.runtime.*
-import androidx.compose.ui.platform.LocalContext
 import com.example.soccmel.model.Comment
 
 @OptIn(ExperimentalMaterial3Api::class)

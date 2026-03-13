@@ -36,7 +36,8 @@ fun HomeScreen(
     onAddPollClick: () -> Unit,
     onSearchClick: () -> Unit,
     onSettingsClick: () -> Unit,
-    onScoreClick: () -> Unit
+    onScoreClick: () -> Unit,
+    onNotificationsClick: () -> Unit
 ) {
     val polls by RealRepository.polls.collectAsState()
     val currentUser by RealRepository.currentUser.collectAsState()
@@ -90,7 +91,10 @@ fun HomeScreen(
                                 )
                                 DropdownMenuItem(
                                     text = { Text("Notifiche") },
-                                    onClick = { showMenu = false },
+                                    onClick = { 
+                                        showMenu = false
+                                        onNotificationsClick()
+                                    },
                                     leadingIcon = { Icon(Icons.Filled.Notifications, contentDescription = null) }
                                 )
                             }
