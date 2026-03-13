@@ -59,14 +59,10 @@ fun HomeScreen(
                             letterSpacing = (-1).sp
                         ) 
                     },
-                    actions = {
-                        IconButton(onClick = onSearchClick) {
-                            Icon(Icons.Filled.Search, contentDescription = "Cerca Utenti", tint = MaterialTheme.colorScheme.primary)
-                        }
-                        
+                    navigationIcon = {
                         Box {
                             IconButton(onClick = { showMenu = true }) {
-                                Icon(Icons.Filled.MoreVert, contentDescription = "Opzioni", tint = MaterialTheme.colorScheme.primary)
+                                Icon(Icons.Filled.Settings, contentDescription = "Impostazioni", tint = MaterialTheme.colorScheme.primary)
                             }
                             
                             DropdownMenu(
@@ -98,6 +94,11 @@ fun HomeScreen(
                                     leadingIcon = { Icon(Icons.Filled.Notifications, contentDescription = null) }
                                 )
                             }
+                        }
+                    },
+                    actions = {
+                        IconButton(onClick = onSearchClick) {
+                            Icon(Icons.Filled.Search, contentDescription = "Cerca Utenti", tint = MaterialTheme.colorScheme.primary)
                         }
                     },
                     colors = TopAppBarDefaults.topAppBarColors(

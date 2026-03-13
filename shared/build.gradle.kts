@@ -59,3 +59,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
+
+tasks.register("testClasses") {
+    dependsOn("assembleUnitTest")
+}

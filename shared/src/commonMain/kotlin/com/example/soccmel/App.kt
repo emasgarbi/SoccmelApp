@@ -59,7 +59,7 @@ fun AppMain() {
                             selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true,
                             onClick = {
                                 navController.navigate(screen.route) {
-                                    popUpTo(navController.graph.findStartDestination().id) {
+                                    popUpTo(navController.graph.findStartDestination().route!!) {
                                         saveState = true
                                     }
                                     launchSingleTop = true
@@ -136,7 +136,7 @@ fun AppMain() {
                     onPollClick = { pollId -> navController.navigate("poll/$pollId") },
                     onLogout = {
                         navController.navigate("login") {
-                            popUpTo(0) { inclusive = true }
+                            popUpTo("login") { inclusive = true }
                         }
                     }
                 )
@@ -148,7 +148,7 @@ fun AppMain() {
                     onPollClick = { pollId -> navController.navigate("poll/$pollId") },
                     onLogout = {
                         navController.navigate("login") {
-                            popUpTo(0) { inclusive = true }
+                            popUpTo("login") { inclusive = true }
                         }
                     }
                 )
